@@ -1,0 +1,7 @@
+__pycache__
+*config*
+*.txt
+*.yml
+*.log
+test*
+dist
