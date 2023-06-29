@@ -129,18 +129,19 @@ def get_app_version() -> str:
     )
 
 
-def main() -> dict:
+def generage_ios() -> dict:
     devices, ioses = get_device_and_ios()
     ios_major = get_ios_major(ioses)
 
     app_version = get_app_version()
-    device_model = choice(devices)
+    device_model = 'iPhone ' + choice(devices)
     system_version = get_ios(ios_major)
 
     return {
+        'api_id': 1,
+        'api_hash': 'b6b154c3707471f5339bd661645ed3d6',
         'app_version': app_version,
         'device_model': device_model,
         'system_version': system_version,
     }
 
-c.log(main())
