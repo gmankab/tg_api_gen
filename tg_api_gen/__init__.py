@@ -7,7 +7,7 @@ from random import (
 
 
 proj_name = 'tg_api_gen'
-proj_version = '23.0.1'
+proj_version = '23.0.2'
 
 
 def get_device_and_ios_major() -> tuple:
@@ -220,7 +220,7 @@ def generate_android() -> dict:
     }
 
 
-def generate_randrom():
+def generate_random():
     return choice(
         [
             generate_android,

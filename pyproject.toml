@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 dependencies = []
 name = "tg_api_gen"
-version = "23.0.1"
+version = "23.0.2"
 description = "lightweight skript that generates realistic device_model, app_verion, system_version for telegram"
 readme = "readme.md"
 requires-python = ">=3.10"
