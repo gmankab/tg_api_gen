@@ -1,10 +1,11 @@
 #!/bin/python
 
-from pathlib import Path
 import shutil
 import toml
+import sys
 import os
-from tg_api_gen.main import (
+from pathlib import Path
+from tg_api_gen import (
     proj_version,
     proj_name,
 )
@@ -63,4 +64,6 @@ shutil.rmtree(
     dist_path,
     ignore_errors = True,
 )
+
+os.system(f'{sys.executable} -m prettygit')
 

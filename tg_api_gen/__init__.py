@@ -7,7 +7,7 @@ from random import (
 
 
 proj_name = 'tg_api_gen'
-proj_version = '23.0.0'
+proj_version = '23.0.1'
 
 
 def get_device_and_ios_major() -> tuple:
