@@ -2,10 +2,12 @@
 
 library that generates realistic device_model, app_verion, and system_version (android and ios) for telegram userbots
 
-installation:
-`pip install tg_api_gen`
+## installation
+```bash
+pip install tg_api_gen pyrogram tgcrypto
+```
 
-usage:
+## usage
 
 ```python
 import tg_api_gen
@@ -34,5 +36,13 @@ async def main():
       )
  ```
 
-thanks [opentele](https://github.com/thedemons/opentele)
+## credits
 
+thanks to:
+- [opentele](https://github.com/thedemons/opentele)
+- [pyrogram](https://github.com/pyrogram/pyrogram)
+- [telethon](https://github.com/LonamiWebs/Telethon)
+
+## license
+
+license is gnu agpl 3 - [gnu.org/licenses/agpl-3.0.en.html](https://gnu.org/licenses/agpl-3.0.en.html)
