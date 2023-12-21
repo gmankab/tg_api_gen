@@ -9,7 +9,7 @@ from random import (
 
 
 proj_name = 'tg_api_gen'
-proj_version = '23.0.2'
+proj_version = '23.1.0'
 
 
 def get_device_and_ios_major() -> tuple:
@@ -28,24 +28,28 @@ def get_device_and_ios_major() -> tuple:
         ],
         [
             ['X', 'XS', 'XS Max', 'XR'],
-            [12, 16],
+            [12, 17],
         ],
         [
             ['11', '11 Pro', '11 Pro Max'],
-            [12, 16],
+            [12, 17],
         ],
         [
             ['12', '12 mini', '12 Pro', '12 Pro Max'],
-            [14, 16]
+            [14, 17],
         ],
         [
             ['13', '13 mini', '13 Pro', '13 Pro Max'],
-            [15, 16]
+            [15, 17],
         ],
         [
             ['14', '14 Plus', '14 Pro', '14 Pro Max'],
-            [16]
+            [16, 17],
         ],
+        [
+            ['15', '15 Plus', '15 Pro', '15 Pro Max'],
+            [17],
+        ]
     ]
     devices, ios_majors = choice(devices_and_ioses)
     device_model: str = 'iPhone ' + choice(devices)
@@ -90,6 +94,11 @@ def get_ios_system_version(
     major: int
 ) -> str:
     versions: dict = {
+        17: [
+            [17, 0, 3],
+            [17, 1, 2],
+            [17, 2, 1],
+        ],
         16: [
             [16, 0, 3],
             [16, 1, 2],
@@ -97,6 +106,8 @@ def get_ios_system_version(
             [16, 3, 1],
             [16, 4, 1],
             [16, 5, 1],
+            [16, 6, 7],
+            [16, 7, 4],
         ],
         15: [
             [15, 0, 2],
@@ -107,6 +118,7 @@ def get_ios_system_version(
             [15, 5, 6],
             [15, 6, 1],
             [15, 7, 7],
+            [15, 8, 0]
         ],
         14: [
             [14, 0, 1],
@@ -156,6 +168,7 @@ def get_android_system_version():
             '12 (31)',
             # '12L (32)',
             '13 (33)',
+            'SDK 34',
         ]
     )
 
@@ -176,9 +189,15 @@ def version_to_str(
 
 def get_ios_app_version() -> str:
     versions = [
-        [9, 6, 3],
-        [9, 5, 3],
-        [9, 4, 2],
+        [9,  6, 3],
+        [9,  5, 3],
+        [9,  4, 2],
+        [9,  5, 3],
+        [9,  6, 6],
+        [10, 0, 3],
+        [10, 1, 2],
+        [10, 2, 6],
+        [10, 3, 1],
     ]
     return 'Telegram IOS ' + version_to_str(
         *choice(versions)
@@ -187,9 +206,16 @@ def get_ios_app_version() -> str:
 
 def get_android_app_version() -> str:
     versions = [
-        [9, 6, 7],
-        [9, 5, 8],
-        [9, 4, 9],
+        [9,  6, 7],
+        [9,  5, 8],
+        [9,  4, 9],
+        [9,  5, 8],
+        [9,  6, 7],
+        [9,  7, 6],
+        [10, 0, 9],
+        [10, 1, 3],
+        [10, 2, 9],
+        [10, 3, 2],
     ]
     return 'Telegram Android ' + version_to_str(
         *choice(versions)

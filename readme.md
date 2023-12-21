@@ -2,39 +2,28 @@
 
 library that generates realistic device_model, app_verion, and system_version (android and ios) for telegram userbots
 
+there is a very high risk to get ban from telegram, please don't use with your main account
+
 ## installation
 ```bash
 pip install tg_api_gen pyrogram tgcrypto
 ```
 
-## usage
+## how to use
+
+just see what data generated:
 
 ```python
 import tg_api_gen
-from pyrogram import Client
 
-async def main():
-  client = Client(
-      name = 'my_clien_name',
-      **tg_api_gen.generate_random(),
-  )
-  phone = '' # put phone here
-  await client.connect()
-  code = await client.send_code(
-      phone_number = phone
-  )
-  print(code)
-  try:
-      user = await client.sign_in(
-          phone_number = phone,
-          phone_code_hash = code.phone_code_hash,
-          phone_code = input('code: '),
-      )
-  except errors.SessionPasswordNeeded:
-      user = await client.check_password(
-          password = input('password: ')
-      )
+print(tg_api_gen.generate_random())
  ```
+
+real code example - [usage.py](usage.py)
+
+## changelog
+
+see [changelog.md](changelog.md)
 
 ## credits
 
@@ -46,3 +35,4 @@ thanks to:
 ## license
 
 license is gnu agpl 3 - [gnu.org/licenses/agpl-3.0.en.html](https://gnu.org/licenses/agpl-3.0.en.html)
+

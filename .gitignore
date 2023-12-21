@@ -1,2 +1,5 @@
 __pycache__
+.venv
 start.sh
+my_client_name.session
+
