@@ -18,7 +18,7 @@ async def main():
       name = 'my_clien_name',
       **tg_api_gen.generate_random(),
   )
-  phone = ' # put phone here
+  phone = '' # put phone here
   await client.connect()
   code = await client.send_code(
       phone_number = phone
